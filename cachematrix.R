@@ -39,10 +39,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
 
-  ## first get matrix from x parameter
+  ## first get inverse matrix from x parameter
   m <- x$getinverse()
   
-  ## if inverse have been calculated yet it is used cached data
+  ## if inverse have been calculated (m is not null) yet it is used 
+  ## cached data
   if(!is.null(m)) {
     message("getting cached data")
     return(m)
